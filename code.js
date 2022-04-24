@@ -14,10 +14,12 @@ const folderID = "1rOrMeHMbLUXG-3nSJEmISA_T6fyL8vSu";
 
 // the code accesses the frames from most to least recently modified, so if your frames weren't modified in order you can use this
 // as long as your frames are all of the form [name][index] then you can run reorder() and it will rename your frames in order
+// this uses folderID
 const curName = "";
 const newName = "";
 
 // if you want to remove any image on the sheet then you can run clear() and it will turn the whole sheet white
+// this uses sheetsID
 
 ////////////////////////////////////////////////////////////////////////////////////
 // i copy pasted this whole section from a jpg decoder library (jpeg-js)
