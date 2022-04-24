@@ -2,13 +2,22 @@
 // this code will render a gif on a google sheets file, using the cell background colors as pixels
 // it's really bad
 
-// if for whatever reason you want to run the code yourself please read the README
-// variables to change:
+// if for whatever reason you want to run the code yourself, copy paste this code into google apps script and run render()
+// but before that here are some variables to change:
 
 const sheetsID = "1SA99zfDYAzbcIPNUbzf5b0Lh6qm-uLYmPmXnGk-peeA";
+// the image will be rendered on the first sheet of the file
+
 const folderID = "1rOrMeHMbLUXG-3nSJEmISA_T6fyL8vSu";
+// make sure the folder contains the frames of the gif as jpgs
+// also the frames should be 20000 pixels (i would go with 125x160 or 100x200) otherwise some pixels will lag behind or ahead
+
+// the code accesses the frames from most to least recently modified, so if your frames weren't modified in order you can use this
+// as long as your frames are all of the form [name][index] then you can run reorder() and it will rename your frames in order
 const curName = "";
 const newName = "";
+
+// if you want to remove any image on the sheet then you can run clear() and it will turn the whole sheet white
 
 ////////////////////////////////////////////////////////////////////////////////////
 // i copy pasted this whole section from a jpg decoder library (jpeg-js)
